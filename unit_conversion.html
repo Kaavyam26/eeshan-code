@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Unit Conversion HomePage</title>
+
+</head>
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 10%;
+        background-color: #007AF3;
+    }
+
+    .logo {
+        cursor: pointer;
+    }
+
+    .nav__links a,
+    .cta,
+    .overlay__content a {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        color: black;
+        text-decoration: none;
+        font-style: bold;
+        font-size: 20px;
+    }
+
+    .nav__links {
+        list-style: none;
+        display: flex;
+    }
+
+    .nav__links li {
+        padding: 0px 20px;
+        color: black;
+    }
+
+    .nav__links li a {
+        transition: color 0.3s ease 0s;
+    }
+
+    .nav__links li a:hover {
+        color: white;
+    }
+
+    .cta {
+        padding: 9px 25px;
+        background-color: rgba(0, 136, 169, 1);
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: background-color 0.3s ease 0s;
+    }
+
+    .cta:hover {
+        background-color: rgba(0, 136, 169, 0.8);
+    }
+
+    section {
+        padding: 5em 2em;
+    }
+
+    .hero {
+        text-align: center;
+    }
+
+    .af {
+        font-size: 50px;
+        text-align: left;
+        color: darkblue;
+        position: relative;
+        top: 200px;
+    }
+
+    .fa {
+        text-align: left;
+        font-size: 20px;
+        position: relative;
+        top: 150px;
+    }
+
+    .hero-img {
+        position: relative;
+        right: 55px;
+        top: -150px;
+        size: 300em;
+    }
+</style>
+
+<body>
+    <header>
+        <img src="images/logo.jpg" alt="logo">
+        <nav>
+            <ul class="nav__links">
+                <li><a href="unit_conversion.html">Home</a></li>
+                <li><a href="kilometer_mile.html">Distance Convertor</a></li>
+                <li><a href="feet_inches.html">Length Convertor</a></li>
+                <li><a href="pound_kilogram.html">Weight Convertor</a></li>
+                <li><a href="centigrade_farenhite.html">Temperature Convertor</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="left-col">
+                <p class="fa">It's User-Friendly &amp; Easy to Use </p>
+                <h1 class="af">A Fun and Interactive Way
+                    to Convert Length, Distance, Weight and Temperature!</h1>
+
+
+
+                <img src="images/logo.jpg" class="hero-img" alt="logo">
+
+            </div>
+    </section>
+</body>
+
+
+</html>

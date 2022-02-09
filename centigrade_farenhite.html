@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<title>Fahrenheit to Celcius Temperature Converter</title>
+
+<style>
+    .body {
+        background-color: lightblue;
+    }
+
+    .lc {
+        color: blue;
+        font-size: 50px;
+        text-align: center;
+
+    }
+
+    .lcp {
+        font-weight: bold;
+        font-size: 25px;
+    }
+
+    .inch {
+        color: darkblue;
+        font-weight: bold;
+    }
+
+    .feet {
+        color: darkblue;
+        font-weight: bold;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 10%;
+        background-color: #007AF3;
+    }
+
+    .logo {
+        cursor: pointer;
+    }
+
+    .nav__links a,
+    .cta,
+    .overlay__content a {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        color: black;
+        text-decoration: none;
+        font-style: bold;
+        font-size: 20px;
+    }
+
+    .nav__links {
+        list-style: none;
+        display: flex;
+    }
+
+    .nav__links li {
+        padding: 0px 20px;
+        color: black;
+    }
+
+    .nav__links li a {
+        transition: color 0.3s ease 0s;
+    }
+
+    .nav__links li a:hover {
+        color: white;
+    }
+
+    .cta {
+        padding: 9px 25px;
+        background-color: rgba(0, 136, 169, 1);
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: background-color 0.3s ease 0s;
+    }
+
+    .cta:hover {
+        background-color: rgba(0, 136, 169, 0.8);
+    }
+</style>
+
+<body>
+    <header>
+        <img src="images/logo.jpg" alt="logo">
+        <nav>
+            <ul class="nav__links">
+                <li><a href="unit_conversion.html">Home</a></li>
+                <li>
+                    <a href="kilometer_mile.html">Distance Convertor</a>
+                </li>
+                <li>
+                    <a href="feet_inches.html">Length Convertor</a>
+                </li>
+                <li>
+                    <a href="pound_kilogram.html">Weight Convertor</a>
+                </li>
+                <li><a href="centigrade_farenhite.html">Temperature Convertor</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <h2 class="lc">Temperature Converter</h2>
+    <p class="lcp">Type a value in the Fahrenheit field to convert the value to Celsius and Vice Versa:</p>
+
+    <p>
+        <label class="feet">Fahrenheit</label>
+        <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="temperatureConverter(this.value)"
+            onchange="temperatureConverter(this.value)">
+    </p>
+    <p>Celcius: <span id="outputCelcius"></span></p>
+
+    <p>
+        <label class="feet">Celsius</label>
+        <input id="inputCelsius" type="number" placeholder="Celsius" oninput="temperatureConverter2(this.value)"
+            onchange="temperatureConverter2(this.value)">
+    </p>
+    <p>Fahrenheit: <span id="outputFahrenheit"></span></p>
+
+
+    <script>
+        function temperatureConverter(valNum) {
+            valNum = parseFloat(valNum);
+            document.getElementById("outputCelcius").innerHTML = (valNum - 32) / 1.8;
+        }
+        function temperatureConverter2(valNum) {
+            valNum = parseFloat(valNum);
+            document.getElementById("outputFahrenheit").innerHTML = (valNum * 1.8) + 32;
+        }
+    </script>
+
+</body>
+
+</html>

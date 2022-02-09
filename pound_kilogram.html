@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<title>Pounds to Kilograms Weight Converter</title>
+<style>
+    .body {
+        background-color: lightblue;
+    }
+
+    .lc {
+        color: blue;
+        font-size: 50px;
+        text-align: center;
+
+    }
+
+    .lcp {
+        font-weight: bold;
+        font-size: 25px;
+    }
+
+    .inch {
+        color: darkblue;
+        font-weight: bold;
+    }
+
+    .feet {
+        color: darkblue;
+        font-weight: bold;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 10%;
+        background-color: #007AF3;
+    }
+
+    .logo {
+        cursor: pointer;
+    }
+
+    .nav__links a,
+    .cta,
+    .overlay__content a {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        color: black;
+        text-decoration: none;
+        font-style: bold;
+        font-size: 20px;
+    }
+
+    .nav__links {
+        list-style: none;
+        display: flex;
+    }
+
+    .nav__links li {
+        padding: 0px 20px;
+        color: black;
+    }
+
+    .nav__links li a {
+        transition: color 0.3s ease 0s;
+    }
+
+    .nav__links li a:hover {
+        color: white;
+    }
+
+    .cta {
+        padding: 9px 25px;
+        background-color: rgba(0, 136, 169, 1);
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: background-color 0.3s ease 0s;
+    }
+
+    .cta:hover {
+        background-color: rgba(0, 136, 169, 0.8);
+    }
+</style>
+
+<body>
+
+    <header>
+        <img src="images/logo.jpg" alt="logo">
+        <nav>
+            <ul class="nav__links">
+                <li><a href="unit_conversion.html">Home</a></li>
+                <li>
+                    <a href="kilometer_mile.html">Distance Convertor</a>
+                </li>
+                <li>
+                    <a href="feet_inches.html">Length Convertor</a>
+                </li>
+                <li>
+                    <a href="pound_kilogram.html">Weight Convertor</a>
+                </li>
+                <li><a href="centigrade_farenhite.html">Temperature Convertor</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <h2 class="lc">Weight Converter</h2>
+    <p class="lcp">Type a value in the Pounds field to convert the value to Kilograms and Vice Versa:</p>
+
+    <p>
+        <label class="feet">Pounds</label>
+        <input id="inputPounds" type="number" placeholder="Pounds" oninput="weightConverter(this.value)"
+            onchange="weightConverter(this.value)">
+    </p>
+    <p>Kilograms: <span id="outputKilograms"></span></p>
+
+
+    <p>
+        <label class="feet">Kilograms</label>
+        <input id="inputKilograms" type="number" placeholder="Kilograms" oninput="weightConverter2(this.value)"
+            onchange="weightConverter2(this.value)">
+    </p>
+    <p>Pounds: <span id="outputPounds"></span></p>
+
+    <script>
+        function weightConverter(valNum) {
+            document.getElementById("outputKilograms").innerHTML = valNum / 2.2046;
+        }
+
+        function weightConverter2(valNum) {
+            document.getElementById("outputPounds").innerHTML = valNum * 2.2046;
+        }
+    </script>
+
+</body>
+
+</html>
